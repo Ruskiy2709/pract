@@ -63,3 +63,55 @@
     </div>
 </body>
 </html>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Ubuntu:wght@300&family=Unlock&display=swap');
+body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    background: #3d3d3d;
+    padding: 1rem;
+    perspective: 1000px;
+    overflow-x: hidden;
+}
+a {
+    color: rgb(255, 0, 43);
+    text-decoration: none;
+    transition: all .5s;
+    display: block;
+    transform-origin: 0 50%;
+}
+div img {
+    max-width: 20vw;
+    max-height: 20vh;
+    transition: all .5s;
+    transform-origin: 0 50%;
+}
+h1 {
+    margin-top: 0;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+div img:hover {
+    transform: scale(1.5);
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: rotateX(-45deg) translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0px);
+    }
+}
+div {
+    animation: show 1s forwards;
+}
+a:hover {
+    transform: translateX(10px);
+}
+a:active {
+    transform: scale(.9) translateX(10px);
+}
